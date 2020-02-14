@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import headerlogo from "./logo.jpg";
+import { FormattedMessage } from 'react-intl';
 
 const HeaderContentWrapper = styled.div`
   width: 100vw;
@@ -71,13 +72,41 @@ const HeaderAnchor = styled.a`
   cursor: pointer;
   padding: 15px 10.5px 5px 10.5px;
   display: flex;
+  flex-flow: column;
 	justify-content: center;
   align-items: center;
   margin-left: 25px;
   border-bottom: 2px solid #fff;
-  &:hover {
-    color: rgb(204, 162, 228);
-    border-color: rgb(204, 162, 228);
+  --color-light: #eefbfb;
+  --color-main: rgb(204, 162, 228);
+`;
+
+const HeaderAnchorSpan = styled.span`
+  z-index: -1;
+  position: relative;
+  left: 0;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  height: .4em;
+  &:before {
+    content: "";
+    height: 100%;
+    bottom: -1px;
+    background: linear-gradient(90deg,hsla(0,0%,100%,0) 0,var(--color-main) 25%,var(--color-main) 75%,hsla(0,0%,100%,0));
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .1s .3s,-webkit-transform .4s;
+    transform: scaleX(0) translateZ(0);
+    ${HeaderAnchor}:hover & {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+      transition: opacity .1s 0s,-webkit-transform .4s cubic-bezier(.39,.575,.565,1);
+    }
   }
 `;
 
@@ -89,15 +118,27 @@ const Header = () => {
           <HeaderLogoAndTextHolder>
             <HeaderLogo src={headerlogo}></HeaderLogo>
             <HeaderLogoTextHolder>
-              <HeaderLogoLargeText>ДОЧКИ - СЫНОЧКИ</HeaderLogoLargeText>
-              <HeaderLogoSmallText>ДЕТСКИЙ ЦЕНТР РАЗВИТИЯ</HeaderLogoSmallText>
+              <HeaderLogoLargeText><FormattedMessage id="homepage.logoLargeText" /></HeaderLogoLargeText>
+              <HeaderLogoSmallText><FormattedMessage id="homepage.logoSmallText" /></HeaderLogoSmallText>
             </HeaderLogoTextHolder>
           </HeaderLogoAndTextHolder>
           <HeaderAnchorsContainer>
-            <HeaderAnchor>О нас</HeaderAnchor>
-            <HeaderAnchor>Программы</HeaderAnchor>
-            <HeaderAnchor>Преимущества</HeaderAnchor>
-            <HeaderAnchor>Контакты</HeaderAnchor>
+            <HeaderAnchor>
+              <FormattedMessage id="homepage.aboutUs" />
+              <HeaderAnchorSpan></HeaderAnchorSpan>
+            </HeaderAnchor>
+            <HeaderAnchor>
+              <FormattedMessage id="homepage.programs" />
+              <HeaderAnchorSpan></HeaderAnchorSpan>
+            </HeaderAnchor>
+            <HeaderAnchor>
+              <FormattedMessage id="homepage.advantages" />
+              <HeaderAnchorSpan></HeaderAnchorSpan>
+            </HeaderAnchor>
+            <HeaderAnchor>
+              <FormattedMessage id="homepage.contacts" />
+              <HeaderAnchorSpan></HeaderAnchorSpan>
+            </HeaderAnchor>
           </HeaderAnchorsContainer>
         </HeaderContent>
       </HeaderContentWrapper>
