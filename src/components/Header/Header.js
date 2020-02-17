@@ -67,7 +67,8 @@ const HeaderAnchorsContainer = styled.div`
 
 const HeaderAnchor = styled.a`
   color: #262835;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gilroy-Light';
+  font-weight: 600;
   font-size: 20px;
   cursor: pointer;
   padding: 15px 10.5px 5px 10.5px;
@@ -79,6 +80,21 @@ const HeaderAnchor = styled.a`
   border-bottom: 2px solid #fff;
   --color-light: #eefbfb;
   --color-main: rgb(204, 162, 228);
+`;
+
+const HeaderContactsAnchor = styled(HeaderAnchor)`
+  padding: 10px 23px;
+  border: 2px solid rgb(204, 162, 228);
+  font-family: 'Gilroy-ExtraBold';
+  border-radius: 50px;
+  background: rgb(204, 162, 228);
+  color: #FFF;
+  font-weight: bold;
+  &:hover {
+    background-color: #BB4FAB;
+    border-color: #BB4FAB;
+    transition: all .4s;
+  }
 `;
 
 const HeaderAnchorSpan = styled.span`
@@ -118,27 +134,26 @@ const Header = () => {
           <HeaderLogoAndTextHolder>
             <HeaderLogo src={headerlogo}></HeaderLogo>
             <HeaderLogoTextHolder>
-              <HeaderLogoLargeText><FormattedMessage id="homepage.logoLargeText" /></HeaderLogoLargeText>
-              <HeaderLogoSmallText><FormattedMessage id="homepage.logoSmallText" /></HeaderLogoSmallText>
+              <HeaderLogoLargeText><FormattedMessage id="mainScreen.logoLargeText" /></HeaderLogoLargeText>
+              <HeaderLogoSmallText><FormattedMessage id="mainScreen.logoSmallText" /></HeaderLogoSmallText>
             </HeaderLogoTextHolder>
           </HeaderLogoAndTextHolder>
           <HeaderAnchorsContainer>
             <HeaderAnchor>
-              <FormattedMessage id="homepage.aboutUs" />
+              <FormattedMessage id="mainScreen.aboutUs" />
               <HeaderAnchorSpan></HeaderAnchorSpan>
             </HeaderAnchor>
             <HeaderAnchor>
-              <FormattedMessage id="homepage.programs" />
+              <FormattedMessage id="mainScreen.programs" />
               <HeaderAnchorSpan></HeaderAnchorSpan>
             </HeaderAnchor>
             <HeaderAnchor>
-              <FormattedMessage id="homepage.advantages" />
+              <FormattedMessage id="mainScreen.advantages" />
               <HeaderAnchorSpan></HeaderAnchorSpan>
             </HeaderAnchor>
-            <HeaderAnchor>
-              <FormattedMessage id="homepage.contacts" />
-              <HeaderAnchorSpan></HeaderAnchorSpan>
-            </HeaderAnchor>
+            <HeaderContactsAnchor>
+              <FormattedMessage id="mainScreen.contacts" />
+            </HeaderContactsAnchor>
           </HeaderAnchorsContainer>
         </HeaderContent>
       </HeaderContentWrapper>
