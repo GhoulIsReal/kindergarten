@@ -6,10 +6,12 @@ const AboutUs = () => {
     return(
         <div>
             <styled.AboutUsSection>
-                <styled.AboutUsContent>
-                    <styled.AboutUsCaption><FormattedMessage id="mainScreen.aboutUs"/></styled.AboutUsCaption>
-                    <styled.AboutUsText><FormattedMessage id="aboutUs.text"/></styled.AboutUsText>
-                </styled.AboutUsContent>
+                <styled.AboutUsContentHolder>
+                    <styled.AboutUsContent>
+                        <styled.AboutUsCaption><FormattedMessage id="mainScreen.aboutUs"/></styled.AboutUsCaption>
+                        <styled.AboutUsText><FormattedMessage id="aboutUs.text"/></styled.AboutUsText>
+                    </styled.AboutUsContent>
+                </styled.AboutUsContentHolder>
             </styled.AboutUsSection>
         </div>
     )
