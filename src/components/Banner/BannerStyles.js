@@ -102,10 +102,10 @@ const MainScreenAlertAndSendButtonHolder = styled.div`
     justify-content: space-between;
 `;
 
-const MainScreenFormTextAlertBlurredBG = styled.div`
-    position: relative;
+const TextBlurredBG = styled.div`
+    position: absolute;
     left: 0;
-    top: -100%;
+    top: 0;
     height: 100%;
     width: 100%;
     background: url(${blurredCover}) center center no-repeat; 
@@ -113,7 +113,8 @@ const MainScreenFormTextAlertBlurredBG = styled.div`
     z-index: -1;
 `;
 
-const MainScreenFormTextAlert = styled.p`
+const MainScreenFormTextAlert = styled.div`
+    position: relative;
     height: 100%;
     width: 55%;
     margin: 0;
@@ -154,7 +155,7 @@ export {
     MainScreenInput,
     MainScreenTextArea,
     MainScreenAlertAndSendButtonHolder,
-    MainScreenFormTextAlertBlurredBG,
+    TextBlurredBG,
     MainScreenFormTextAlert,
     MainScreenAbbreviation,
     MainScreenSendButton

@@ -6,7 +6,8 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import AboutUs from './components/AboutUs/AboutUs';
 import ProgramsHolder from './components/ProgramsHolder/ProgramsHolder';
-import programsCollection from './data';
+import { programsCollection, advantageCardsCollection } from './data';
+import AdvantagesHolder from './components/AdvantagesHolder/AdvantagesHolder';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Banner />
       <AboutUs />
       <ProgramsHolder programsCollection={programsCollection}/>
+      <AdvantagesHolder advantagesCollection={advantageCardsCollection}/>
     </div>
   );
 }

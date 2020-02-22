@@ -18,7 +18,7 @@ const Banner = () => {
                             <styled.MainScreenTextArea placeholder="Оставьте комментарий...(макс 150 символов)" maxLength="150"></styled.MainScreenTextArea>
                             <styled.MainScreenAlertAndSendButtonHolder>
                                 <styled.MainScreenFormTextAlert><FormattedMessage id="mainScreen.formAlert"/>
-                                    <styled.MainScreenFormTextAlertBlurredBG></styled.MainScreenFormTextAlertBlurredBG>
+                                    <styled.TextBlurredBG></styled.TextBlurredBG>
                                 </styled.MainScreenFormTextAlert>
                                 <styled.MainScreenAbbreviation title="Нажимая кнопку 'Отправить' Вы даете согласие на обработку своих персональных данных">
                                     <styled.MainScreenSendButton primary type="submit" value="Отправить"></styled.MainScreenSendButton>

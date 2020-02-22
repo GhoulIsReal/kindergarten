@@ -8,12 +8,12 @@ const ProgramsWrapper = styled.div`
     width: 100vw;
     height: auto;
     background: url(${background}) center center no-repeat;  
-    background-size: 100% auto;
+    background-size: 100% 100%;
 `;
 
 const ProgramsHolderHeadingKeeper = styled.div`
-    margin: 3.4vw 0 30px 0;
-    width: 50vw;
+    margin: 90px 0 30px 0;
+    width: 47.5vw;
     display: flex;
     justify-content: flex-end;
 `;

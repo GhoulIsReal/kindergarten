@@ -9,7 +9,7 @@ const AboutUsSection = styled.div`
     width: 100vw;
     height: 88.5vh;
     background: url(${cover}) center center no-repeat;  
-    background-size: 100% auto;
+    background-size: 100% 100%;
 `;
 
 const AboutUsContentHolder = styled.div`

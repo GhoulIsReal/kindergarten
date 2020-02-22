@@ -7,6 +7,9 @@ const ProgramItself = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7vh;
+    padding: 0 20px;
+    background-color: #faf5ff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 `;
 
 const ProgramImg = styled.img`
@@ -19,7 +22,7 @@ const ProgramImg = styled.img`
 const ProgramSectionRightCol = styled.div`
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 45vw;
     height: 80%;
 `;
@@ -30,6 +33,7 @@ const ProgramHeading = styled.p`
     font-size: 2.5vw; 
     margin: 0;
     width: 100%;
+    cursor: default;
 `;
 
 const ProgramDescription = styled(ProgramHeading)`
