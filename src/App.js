@@ -8,6 +8,8 @@ import AboutUs from './components/AboutUs/AboutUs';
 import ProgramsHolder from './components/ProgramsHolder/ProgramsHolder';
 import { programsCollection, advantageCardsCollection } from './data';
 import AdvantagesHolder from './components/AdvantagesHolder/AdvantagesHolder';
+import Contacts from './components/Contacts/Contacts';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <AboutUs />
       <ProgramsHolder programsCollection={programsCollection}/>
       <AdvantagesHolder advantagesCollection={advantageCardsCollection}/>
+      <Contacts />
+      <Footer />
     </div>
   );
 }
