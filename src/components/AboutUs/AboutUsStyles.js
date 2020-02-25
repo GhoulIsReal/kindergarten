@@ -24,7 +24,7 @@ const AboutUsContent = styled.div`
     display: flex;
     flex-flow: column;
     width: 50vw;
-    height: 55%;
+    height: 62%;
     justify-content: space-between;
 `;
 
@@ -40,6 +40,7 @@ const AboutUsCaption = styled.p`
 const AboutUsText = styled(AboutUsCaption)`
     font-family: 'Gilroy-Light';
     font-size: 1.9302vw;
+    line-height: 2.2vw;
 `;
 
 

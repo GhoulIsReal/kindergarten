@@ -6,7 +6,7 @@ import Map from '../Map/Map';
 const Contacts = () => {
     return (
         <div>
-            <styled.ContactsSection>
+            <styled.ContactsSection name="contacts">
                 <styled.ContactsHolder>
                     <styled.ContactsHeading><FormattedMessage id="contactsSection.heading"/></styled.ContactsHeading>
                     <styled.ContactsAndMapHolder>

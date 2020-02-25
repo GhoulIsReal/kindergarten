@@ -15,4 +15,10 @@ const Program = ({ image, heading, description }) => {
     )
 }
 
-export default Program;
+const InnerProgramDesc = () => {
+    return (
+        <styled.ProgramDescription>В нашем мини саде обучение проходит через игру - ведь играя можно научить ребёнка всему на свете: иностранным языкам, наукам, полезным навыкам.<br /> Ваш ребенок: <br />⁃получит необходимые навыки общения со сверстниками; <br /> ⁃расширит свои знания об окружающей среде; <br /> ⁃приобретет самостоятельность и инициативность; <br /> ⁃разовьет творческие способности и навыки самообслуживания.</styled.ProgramDescription>
+    )
+}
+
+export { Program, InnerProgramDesc };

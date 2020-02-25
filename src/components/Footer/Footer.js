@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import * as styled from './FooterStyles';
-import facebookIcon from './facebook-logo.svg';
+import whatsapp from './whatsapp.svg';
 import instagramIcon from './instagram.svg';
 
 const Footer = () => {
@@ -10,8 +10,8 @@ const Footer = () => {
             <styled.FooterHolder>
                 <styled.Footer>
                     <styled.FooterIconsHolder>
-                        <styled.FooterIconAnchor href="/"><styled.FooterIcon src={facebookIcon}></styled.FooterIcon></styled.FooterIconAnchor>
-                        <styled.FooterIconAnchor href="/"><styled.FooterIcon src={instagramIcon}></styled.FooterIcon></styled.FooterIconAnchor>
+                        <styled.FooterIconAnchor target="_blank" href="https://api.whatsapp.com/send?phone=77757900170"><styled.FooterIcon src={whatsapp}></styled.FooterIcon></styled.FooterIconAnchor>
+                        <styled.FooterIconAnchor target="_blank" href="https://www.instagram.com/dochkisynochki_kz/"><styled.FooterIcon src={instagramIcon}></styled.FooterIcon></styled.FooterIconAnchor>
                     </styled.FooterIconsHolder>
                     <styled.FooterCopyright><FormattedMessage id="footer.copyright"/></styled.FooterCopyright>
                 </styled.Footer>

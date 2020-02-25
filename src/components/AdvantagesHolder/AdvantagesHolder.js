@@ -8,7 +8,7 @@ const AdvantagesHolder = ({ advantagesCollection }) => {
 
     return (
         <div>
-            <styled.AdvantagesSectionHolder>
+            <styled.AdvantagesSectionHolder name="advantages">
                 <styled.AdvantagesHeading>
                     <FormattedMessage id="advantagesSection.heading"/>
                     <styled.AdvantagesBlurredBG />

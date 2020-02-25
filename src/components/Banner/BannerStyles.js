@@ -113,17 +113,28 @@ const TextBlurredBG = styled.div`
     z-index: -1;
 `;
 
+const EmptyDiv = styled.div``;
+
 const MainScreenFormTextAlert = styled.div`
     position: relative;
     height: 100%;
     width: 55%;
     margin: 0;
+    border-radius: .27vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+`;
+
+const FormAlertTextHolder = styled.div`
+    width: 100%;
+    height: 100%;
+    margin: 0;
     font-family: 'Gilroy-Light';
     font-size: 0.976561vw;
     font-weight: 600;
     color: #F39;
-    border-radius: .27vw;
-    z-index: 1;
 `;
 
 const MainScreenAbbreviation = styled.abbr`
@@ -155,7 +166,9 @@ export {
     MainScreenInput,
     MainScreenTextArea,
     MainScreenAlertAndSendButtonHolder,
+    FormAlertTextHolder,
     TextBlurredBG,
+    EmptyDiv,
     MainScreenFormTextAlert,
     MainScreenAbbreviation,
     MainScreenSendButton

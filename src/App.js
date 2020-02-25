@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GlobalFonts from './fonts/fonts';
 import logo from './logo.svg';
 import './App.css';
@@ -11,8 +11,11 @@ import AdvantagesHolder from './components/AdvantagesHolder/AdvantagesHolder';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
 
-
 function App() {
+  useEffect(() => {
+    window.fetch("http://localhost:3001/");
+  })
+
   return (
     <div className="App">
       <GlobalFonts />

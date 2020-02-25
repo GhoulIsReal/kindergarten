@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ProgramItself = styled.div`
     width: 65vw;
-    height: 40.75vh;
+    height: 46vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@ const ProgramSectionRightCol = styled.div`
 const ProgramHeading = styled.p`
     text-align: left;
     font-family: 'Gilroy-ExtraBold';
-    font-size: 2.5vw; 
+    font-size: 2.2vw; 
     margin: 0;
     width: 100%;
     cursor: default;
@@ -38,7 +38,7 @@ const ProgramHeading = styled.p`
 
 const ProgramDescription = styled(ProgramHeading)`
     font-family: 'Gilroy-Light';
-    font-size: 1.6vw;
+    font-size: 1.3vw;
     height: fit-content;
     color: #4e4e4e;
 `;

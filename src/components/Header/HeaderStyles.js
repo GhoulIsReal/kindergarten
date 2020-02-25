@@ -26,6 +26,7 @@ const HeaderLogoAndTextHolder = styled.div`
   align-items: center;
   width: 17vw;
   min-width: 250px;
+  text-decoration: none;
 `;
 
 const HeaderLogo = styled.img`
@@ -82,6 +83,7 @@ const HeaderAnchor = styled.a`
   border-bottom: 2px solid #fff;
   --color-light: #eefbfb;
   --color-main: rgb(204, 162, 228);
+  text-decoration: none;
 `;
 
 const HeaderContactsAnchor = styled(HeaderAnchor)`

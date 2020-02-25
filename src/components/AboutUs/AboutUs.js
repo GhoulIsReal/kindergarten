@@ -5,7 +5,7 @@ import * as styled from './AboutUsStyles';
 const AboutUs = () => {
     return(
         <div>
-            <styled.AboutUsSection>
+            <styled.AboutUsSection name="aboutUs">
                 <styled.AboutUsContentHolder>
                     <styled.AboutUsContent>
                         <styled.AboutUsCaption><FormattedMessage id="mainScreen.aboutUs"/></styled.AboutUsCaption>
