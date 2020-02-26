@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 import mainImage from './mainpicture.jfif';
 import blurredCover from './beige.jfif';
-
-const ContainerHeaderAndBanner = styled.div`
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: column;
-`;
+import media from '../../mediaQueries';
 
 const BannerHolder = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    flex: 1;
+    height: 100vh;
     background: url(${mainImage}) center center no-repeat;  
     background-size: 100% auto;
+    ${media.ipadLandscape`
+        background-size: 100% 100%;
+    `}
+    ${media.ipadPortrait`
+        height: 67vh;
+        align-items: flex-end;
+    `}
 `;
 
 const ShortTextAndFormHolder = styled.div`
@@ -33,6 +34,9 @@ const ShortAboutAndAgeScopeText = styled.div`
     height: 60%;
     width: 33.8vw;
     padding-left: 2.25vw;
+    ${media.ipadPortrait`
+        padding-left: 1.25vw;
+    `}
 `;
 
 const ShortAbout = styled.p`
@@ -42,12 +46,20 @@ const ShortAbout = styled.p`
     font-size: 2.99479vw;
     line-height: 3.4vw;
     color: #FFF;
+    ${media.ipadPortrait`
+        font-size: 35px;
+        line-height: 48px;
+    `}
 `;
 
 const AgeScopeText = styled(ShortAbout)`
     font-size: 1.43229vw;
     line-height: 2.4vw;
     color: #f39;
+    ${media.ipadPortrait`
+        font-size: 20px;
+        line-height: 30px;
+    `}
 `;
 
 const MainScreenFormHolder = styled(ShortAboutAndAgeScopeText)`
@@ -74,6 +86,10 @@ const MainScreenInput = styled.input`
     &:focus {
         outline: none;
     }
+    ${media.ipadPortrait`
+        font-size: 16px;
+        height: 50px;
+    `}
 `;
 
 const MainScreenTextArea = styled.textarea`
@@ -93,6 +109,10 @@ const MainScreenTextArea = styled.textarea`
     &:focus {
         outline: none;
     }
+    ${media.ipadPortrait`
+        height: 9vw;
+        font-size: 16px;
+    `}
 `;
 
 const MainScreenAlertAndSendButtonHolder = styled.div`
@@ -100,6 +120,9 @@ const MainScreenAlertAndSendButtonHolder = styled.div`
     width: 100%;
     height: 3.4vw;
     justify-content: space-between;
+    ${media.ipadPortrait`
+        height: 43px;
+    `}
 `;
 
 const TextBlurredBG = styled.div`
@@ -135,6 +158,9 @@ const FormAlertTextHolder = styled.div`
     font-size: 0.976561vw;
     font-weight: 600;
     color: #F39;
+    ${media.ipadPortrait`
+        font-size: 12.5px;
+    `}
 `;
 
 const MainScreenAbbreviation = styled.abbr`
@@ -156,7 +182,6 @@ const MainScreenSendButton = styled(MainScreenInput)`
 `;
 
 export {
-    ContainerHeaderAndBanner,
     BannerHolder,
     ShortTextAndFormHolder,
     ShortAboutAndAgeScopeText,

@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import headerlogo from "./logo.jpg";
 import { FormattedMessage } from "react-intl";
 import * as styled from "./HeaderStyles";
 import { Link } from "react-scroll";
 
 const Header = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+  });
+
+  const updateDimensions = () => {
+    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    setWidth(windowWidth);
+  };
+
+  const sidebarCollappsed = width > 1024;
+
   return (
     <div>
       <styled.HeaderContentWrapper>
@@ -20,6 +34,7 @@ const Header = () => {
               </styled.HeaderLogoSmallText>
             </styled.HeaderLogoTextHolder>
           </styled.HeaderLogoAndTextHolder>
+          {sidebarCollappsed ? (
           <styled.HeaderAnchorsContainer>
             <Link
               activeClass="active"
@@ -54,7 +69,7 @@ const Header = () => {
                 <styled.HeaderAnchorSpan></styled.HeaderAnchorSpan>
               </styled.HeaderAnchor>
             </Link>
-            <Link 
+            <Link
               activeClass="active"
               to="contacts"
               smooth={true}
@@ -65,6 +80,7 @@ const Header = () => {
               </styled.HeaderContactsAnchor>
             </Link>
           </styled.HeaderAnchorsContainer>
+          ) : ("")}
         </styled.HeaderContent>
       </styled.HeaderContentWrapper>
     </div>

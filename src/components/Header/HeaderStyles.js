@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../mediaQueries';
 
 const HeaderContentWrapper = styled.div`
   width: 100vw;
@@ -11,6 +12,9 @@ const HeaderContentWrapper = styled.div`
   top: 0;
   z-index: 3;
   background-color: #FFF;
+  ${media.ipadPortrait`
+    height: 100px;
+  `}
 `;
 
 const HeaderContent = styled.div`
@@ -51,6 +55,9 @@ const HeaderLogoLargeText = styled.p`
   font-family: 'Lobster', cursive;
   font-size: 0.911458vw;
   color: rgb(204, 162, 228);
+  ${media.ipadLandscape`
+    font-size: 14px;
+  `}
 `;
 
 const HeaderLogoSmallText = styled(HeaderLogoLargeText)`
@@ -58,6 +65,9 @@ const HeaderLogoSmallText = styled(HeaderLogoLargeText)`
   font-family: 'Comfortaa', cursive;
   font-size: 0.651043vw;
   color: rgb(149, 149, 149);
+  ${media.ipadLandscape`
+    font-size: 10px;
+  `}
 `;
 
 const HeaderAnchorsContainer = styled.div`
@@ -68,8 +78,9 @@ const HeaderAnchorsContainer = styled.div`
   height: auto;
 `;
 
-const HeaderAnchor = styled.a`
+const HeaderAnchor = styled.p`
   color: #262835;
+  margin: 0 0 0 25px;
   font-family: 'Gilroy-Light';
   font-weight: 600;
   font-size: 1.302081vw;
@@ -79,11 +90,13 @@ const HeaderAnchor = styled.a`
   flex-flow: column;
 	justify-content: center;
   align-items: center;
-  margin-left: 25px;
   border-bottom: 2px solid #fff;
   --color-light: #eefbfb;
   --color-main: rgb(204, 162, 228);
   text-decoration: none;
+  ${media.ipadLandscape`
+    font-size: 20px;
+  `}
 `;
 
 const HeaderContactsAnchor = styled(HeaderAnchor)`

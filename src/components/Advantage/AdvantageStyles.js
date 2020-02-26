@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../mediaQueries';
 
 const AdvantageCard = styled.div`
     display: flex;
@@ -9,6 +10,10 @@ const AdvantageCard = styled.div`
     padding: 1.99vh 1.1591vw;
     position: relative;
     z-index: 1;
+    ${media.ipadPortrait`
+        justify-content: space-around;  
+        padding: 1.99vh;
+    `}
 `;
 
 const AdvantageCardHeading = styled.p`
@@ -17,6 +22,12 @@ const AdvantageCardHeading = styled.p`
     margin: 0;
     width: 100%;
     cursor: default;
+    ${media.ipadLandscape`
+        font-size: 18px;
+    `}
+    ${media.ipadPortrait`
+        font-size: 23px;
+    `}
 `;
 
 const AdvantageCardDescription = styled(AdvantageCardHeading)`
@@ -24,6 +35,12 @@ const AdvantageCardDescription = styled(AdvantageCardHeading)`
     font-size: 1vw;
     height: 70%;
     color: #4e4e4e;
+    ${media.ipadLandscape`
+        font-size: 15px;
+    `}
+    ${media.ipadPortrait`
+        font-size: 20px;
+    `}
 `;
 
 export {

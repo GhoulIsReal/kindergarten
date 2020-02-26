@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../mediaQueries';
 
 const FooterHolder = styled.div`
     width: 100vw;
@@ -44,6 +45,9 @@ const FooterCopyright = styled.p`
     font-weight: 600;
     font-size: 1.042vw;
     color: #8c8989;
+    ${media.ipadLandscape`
+        font-size: 16px;
+    `}
 `;
 
 export {

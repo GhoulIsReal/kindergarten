@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import background from './Untitled.jpg';
+import media from '../../mediaQueries';
 
 const ProgramsWrapper = styled.div`
     display: flex;
@@ -16,12 +17,18 @@ const ProgramsHolderHeadingKeeper = styled.div`
     width: 47.5vw;
     display: flex;
     justify-content: flex-end;
+    ${media.ipadLandscape`
+        justify-content: center;
+    `}
 `;
 
 const ProgramsHolderHeading = styled.p`
     margin: 0;
     font-family: 'Gilroy-ExtraBold';
     font-size: 3vw;
+    ${media.ipadPortrait`
+        font-size: 46px;
+    `}
 `;
 
 const ProgramsHoldingDiv = styled.div`
@@ -31,6 +38,12 @@ const ProgramsHoldingDiv = styled.div`
     align-items: center;
     margin-left: 18vw;
     height: auto;
+    ${media.ipadLandscape`
+        margin-left: 0;
+    `}
+    ${media.ipadPortrait`
+        width: 75vw;
+    `}
 `;
 
 export {
