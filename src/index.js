@@ -10,13 +10,7 @@ const userLocale =
   (navigator.languages && navigator.languages[0]) ||
   navigator.language ||
   navigator.userLanguage ||
-  "ru-RU";
-
-// const userMessages =
-//   (navigator.language && navigator.language[1]) ||
-//   navigator.language ||
-//   navigator.userLanguage ||
-//   "ru-RU";
+  "en-US";
 
 ReactDOM.render(
   <IntlProvider locale={userLocale} messages={messages[userLocale]}>

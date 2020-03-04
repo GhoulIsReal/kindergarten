@@ -38,6 +38,8 @@ const Form = () => {
       )
       .then(status => {
         if (status === "Success") {
+          inputName.current.value = "";
+          inputNumber.current.value = "";
           statusDiv.current.classList.remove("loader");
           statusDiv.current.classList.add("success");
           setResponse("Спасибо за вашу заявку!");
@@ -56,8 +58,6 @@ const Form = () => {
   const formValidate = () => {
     if (inputNumber.current.value.length > 10) {
       handleFormSubmitButton();
-      inputName.current.value = "";
-      inputNumber.current.value = "";
       inputNumber.current.style.borderColor = "#FFF";
     } else {
       inputNumber.current.focus();
@@ -78,7 +78,7 @@ const Form = () => {
       ></styled.MainScreenInput>
       <styled.MainScreenInput
         ref={inputNumber}
-        type="tel"
+        type="number"
         placeholder="Телефон(+7 (777) 792-848-24)"
         id="PhoneNum"
         required

@@ -5,14 +5,9 @@ import * as styled from "./HeaderStyles";
 import { Link } from 'react-scroll';
 import SideBarCaller from '../SideBarCaller/SideBarCaller';
 
-const preventMobileHeaderScroll = {
-  height: '100px',
-  position: 'fixed',
-}
-
 const Header = ({ sidebarCollappsed }) => {
   return (
-    <div style={{ height: preventMobileHeaderScroll.height, position: preventMobileHeaderScroll.position, top: '0', left: '0', zIndex: '3' }}>
+    <div className="prevent-scroll" style={{ top: '0', left: '0', zIndex: '3' }}>
       <styled.HeaderContentWrapper>
         <styled.HeaderContent>
           <styled.HeaderLogoAndTextHolder as="a" href="/">

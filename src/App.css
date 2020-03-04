@@ -11,6 +11,11 @@ body {
   font-size: 1.1vw;
 }
 
+.prevent-scroll {
+  height: 11.5vh;
+  position: fixed;
+}
+
 .success {
   color: green;
   font-weight: 600;
@@ -46,6 +51,16 @@ body {
   opacity: 0;
   z-index: 2;
   -webkit-touch-callout: none;
+}
+
+#PhoneNum::-webkit-outer-spin-button,
+#PhoneNum::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#PhoneNum[type=number] {
+  -moz-appearance:textfield;
 }
 
 #menuToggle span {
@@ -98,6 +113,9 @@ body {
 @media only screen and (max-width: 1024px) {
   #menuToggle input:checked ~ span {
     transform: rotate(45deg) translate(-15px, -30px);
+  }
+  .prevent-scroll {
+    height: 100px;
   }
 }
 
