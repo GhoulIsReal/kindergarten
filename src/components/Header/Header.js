@@ -1,26 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import headerlogo from "./logo.jpg";
 import { FormattedMessage } from "react-intl";
 import * as styled from "./HeaderStyles";
-import { Link } from "react-scroll";
+import { Link } from 'react-scroll';
+import SideBarCaller from '../SideBarCaller/SideBarCaller';
 
-const Header = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+const preventMobileHeaderScroll = {
+  height: '100px',
+  position: 'fixed',
+}
 
-  useEffect(() => {
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-  });
-
-  const updateDimensions = () => {
-    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-    setWidth(windowWidth);
-  };
-
-  const sidebarCollappsed = width > 1024;
-
+const Header = ({ sidebarCollappsed }) => {
   return (
-    <div>
+    <div style={{ height: preventMobileHeaderScroll.height, position: preventMobileHeaderScroll.position, top: '0', left: '0', zIndex: '3' }}>
       <styled.HeaderContentWrapper>
         <styled.HeaderContent>
           <styled.HeaderLogoAndTextHolder as="a" href="/">
@@ -36,11 +28,12 @@ const Header = () => {
           </styled.HeaderLogoAndTextHolder>
           {sidebarCollappsed ? (
           <styled.HeaderAnchorsContainer>
-            <Link
+            <Link 
               activeClass="active"
               to="aboutUs"
               smooth={true}
               duration={500}
+              style={{ marginLeft: '25px' }}
             >
               <styled.HeaderAnchor>
                 <FormattedMessage id="mainScreen.aboutUs" />
@@ -52,6 +45,7 @@ const Header = () => {
               to="programs"
               smooth={true}
               duration={700}
+              style={{ marginLeft: '25px' }}
             >
               <styled.HeaderAnchor>
                 <FormattedMessage id="mainScreen.programs" />
@@ -63,6 +57,7 @@ const Header = () => {
               to="advantages"
               smooth={true}
               duration={900}
+              style={{ marginLeft: '25px' }}
             >
               <styled.HeaderAnchor>
                 <FormattedMessage id="mainScreen.advantages" />
@@ -74,13 +69,14 @@ const Header = () => {
               to="contacts"
               smooth={true}
               duration={900}
+              style={{ marginLeft: '25px' }}
             >
               <styled.HeaderContactsAnchor>
                 <FormattedMessage id="mainScreen.contacts" />
               </styled.HeaderContactsAnchor>
             </Link>
           </styled.HeaderAnchorsContainer>
-          ) : ("")}
+          ) : (<SideBarCaller />)}
         </styled.HeaderContent>
       </styled.HeaderContentWrapper>
     </div>

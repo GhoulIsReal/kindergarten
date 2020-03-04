@@ -16,6 +16,10 @@ const Footer = styled.div`
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
+    ${media.mobileL`
+        width: 80vw;
+        height: 100px;
+    `}
 `;
 
 const FooterIconsHolder = styled.div`
@@ -47,6 +51,9 @@ const FooterCopyright = styled.p`
     color: #8c8989;
     ${media.ipadLandscape`
         font-size: 16px;
+    `}
+    ${media.mobileL`
+        font-size: 13px;
     `}
 `;
 

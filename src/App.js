@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import GlobalFonts from './fonts/fonts';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
@@ -12,14 +11,26 @@ import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
+
   useEffect(() => {
-    window.fetch("http://localhost:3001/");
+    window.fetch("https://morning-sea-25065.herokuapp.com/");
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
   })
+
+  const updateDimensions = () => {
+    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    setWidth(windowWidth);
+  };
+
+  const sidebarCollappsed = width > 1024;
+
 
   return (
     <div className="App">
       <GlobalFonts />
-      <Header />
+      <Header sidebarCollappsed={sidebarCollappsed}/>
       <Banner />
       <AboutUs />
       <ProgramsHolder programsCollection={programsCollection}/>

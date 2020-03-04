@@ -10,11 +10,24 @@ const Holder = styled.div`
         width: 80%;
         height: 25vh;
     `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 44vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 29vh;
+    }
+    ${media.mobileL`
+        width: 100%;
+        height: 35vh;
+    `}
+    ${media.mobileM`
+        height: 45vh;
+    `}
 `;
 
 const MapHolder = styled.div`
     width: 100%;
-    height: 100%
+    height: 100%;
 `;
 
 const Map = () => {

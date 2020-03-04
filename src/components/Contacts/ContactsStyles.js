@@ -12,6 +12,21 @@ const ContactsSection = styled.div`
     ${media.ipadPortrait`
         height: 64.5vh;
     `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 87.5vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 70.5vh;
+    }
+    ${media.mobileL`
+        height: 100vh;
+    `}
+    ${media.mobileM`
+        height: 120vh;
+    `}
+    ${media.mobileS`
+        height: 130vh;
+    `}
 `;
 
 const ContactsHolder = styled.div`
@@ -23,6 +38,22 @@ const ContactsHolder = styled.div`
     flex-flow: column;
     ${media.ipadPortrait`
         height: 59.5vh;
+    `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 80.5vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 63.5vh;
+    }
+    ${media.mobileL`
+        height: 85vh;
+        width: 80vw;
+    `}
+    ${media.mobileM`
+        height: 105vh;
+    `}
+    ${media.mobileS`
+        height: 115vh;
     `}
 `;
 
@@ -37,6 +68,16 @@ const ContactsHeading = styled.p`
     ${media.ipadPortrait`
         font-size: 36px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        width: 75vw;
+    }
+    ${media.mobileL`
+        width: 100%;
+        font-size: 32px;
+    `}
+    ${media.mobileM`
+        font-size: 28px;
+    `}
 `;
 
 const ContactsAndMapHolder = styled.div`
@@ -48,6 +89,19 @@ const ContactsAndMapHolder = styled.div`
     ${media.ipadPortrait`
         height: 50vh;
         flex-flow: column;
+    `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 74vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 53vh;
+    }
+    ${media.mobileL`
+        height: 74vh;
+        width: 80vw;
+    `}
+    ${media.mobileM`
+        height: 94vh;
     `}
 `;
 
@@ -64,6 +118,16 @@ const ContactsParagraphsDiv = styled.div`
         width: 76%;
         height: 25vh;
     `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 28vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        width: 100%;
+    }
+    ${media.mobileL`
+        width: 100%;
+        height: auto;
+    `}
 `; 
 
 const ContactsAddress = styled.p`
@@ -75,6 +139,9 @@ const ContactsAddress = styled.p`
     color: #333333;
     ${media.ipadPortrait`
         font-size: 40px;
+    `}
+    ${media.mobileM`
+        font-size: 33px;
     `}
 `;
 
@@ -94,11 +161,27 @@ const CommunicTypeLabel = styled.p`
     ${media.ipadPortrait`
         font-size: 26px;
     `}
+    ${media.mobileL`
+        width: 40%;
+    `}
+    ${media.mobileM`
+        font-size: 23px;
+    `}
+    ${media.mobileS`
+        font-size: 19px;
+    `}
 `;
 
 const CommunicInfo = styled(CommunicTypeLabel)`
     font-family: 'Gilroy-Light';
     width: 35%;
+    ${media.mobileL`
+        width: 57%;
+        margin-left: 3%;
+    `}
+    ${media.mobileS`
+        font-size: 21px;
+    `}
 `;
 
 

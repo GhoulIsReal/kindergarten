@@ -16,6 +16,16 @@ const ProgramItself = styled.div`
         height: 40vh;
         margin-bottom: 5vh;
     `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 55vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 50vh;
+    }
+    ${media.mobileL`
+        width: 80vw;
+        height: 370px;
+    `}
 `;
 
 const ProgramImg = styled.img`
@@ -26,6 +36,9 @@ const ProgramImg = styled.img`
     ${media.ipadPortrait`
         width: 25vw;
     `}
+    ${media.mobileL`
+        display: none;
+    `}
 `;
 
 const ProgramSectionRightCol = styled.div`
@@ -34,6 +47,16 @@ const ProgramSectionRightCol = styled.div`
     justify-content: space-around;
     width: 45vw;
     height: 80%;
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 90%;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 90%;
+    }
+    ${media.mobileL`
+        width: 100%;
+        height: 90%;
+    `}
 `;
 
 const ProgramHeading = styled.p`
@@ -45,6 +68,15 @@ const ProgramHeading = styled.p`
     cursor: default;
     ${media.ipadPortrait`
         font-size: 33px; 
+    `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 28px;
+    }
+    ${media.mobileL`
+        font-size: 22px;
+    `}
+    ${media.mobileM`
+        font-size: 20px;
     `}
 `;
 
@@ -58,6 +90,15 @@ const ProgramDescription = styled.div`
     color: #4e4e4e;
     ${media.ipadLandscape`
         font-size: 20px;
+    `}
+    ${media.mobileL`
+        font-size: 17px;
+    `}
+    ${media.mobileM`
+        font-size: 16px;
+    `}
+    ${media.mobileS`
+        font-size: 15px;
     `}
 `;
 

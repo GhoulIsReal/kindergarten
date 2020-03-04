@@ -18,6 +18,22 @@ const BannerHolder = styled.div`
         height: 67vh;
         align-items: flex-end;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 85vh;
+        width: 100vw;
+        background: url(${mainImage}) top right no-repeat;  
+        background-size: cover;
+    }
+    ${media.mobileL`
+        height: 840px;
+        width: 100vw;
+        background: url(${mainImage}) center right no-repeat;  
+        background-size: cover;
+        justify-content: flex-end;
+    `}
+    ${media.mobileS`
+        height: 900px;
+    `}
 `;
 
 const ShortTextAndFormHolder = styled.div`
@@ -26,6 +42,17 @@ const ShortTextAndFormHolder = styled.div`
     align-items: center;
     width: 75vw;
     height: 80%;
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        flex-flow: column;
+        width: 90vw;
+        justify-content: space-around;
+    }
+    ${media.mobileL`
+        flex-flow: column;
+        width: 90vw;
+        height: 100%;
+        justify-content: flex-end;
+    `}
 `;
 
 const ShortAboutAndAgeScopeText = styled.div`
@@ -36,6 +63,15 @@ const ShortAboutAndAgeScopeText = styled.div`
     padding-left: 2.25vw;
     ${media.ipadPortrait`
         padding-left: 1.25vw;
+        height: 88%;
+    `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 35%;
+        width: 80vw;
+    }
+    ${media.mobileL`
+        width: 100%;
+        height: auto;
     `}
 `;
 
@@ -50,6 +86,12 @@ const ShortAbout = styled.p`
         font-size: 35px;
         line-height: 48px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 44px;
+    }
+    ${media.mobileL`
+        width: 100%;
+    `}
 `;
 
 const AgeScopeText = styled(ShortAbout)`
@@ -60,12 +102,25 @@ const AgeScopeText = styled(ShortAbout)`
         font-size: 20px;
         line-height: 30px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 25px;
+    }
 `;
 
 const MainScreenFormHolder = styled(ShortAboutAndAgeScopeText)`
     width: 31.38vw;
     padding-left: 0;
     align-items: flex-end;
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        width: 60vw;
+        height: 60vh;
+    }
+    ${media.mobileL`
+        height: 400px;
+        align-items: flex-start;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    `}
 `;
 
 const MainScreenInput = styled.input`
@@ -90,6 +145,20 @@ const MainScreenInput = styled.input`
         font-size: 16px;
         height: 50px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 60px;
+        font-size: 20px;
+    }
+    ${media.mobileL`
+        height: 60px;
+        font-size: 18px;
+    `}
+    ${media.mobileM`
+        border: .12vw solid #fff;
+    `}
+    ${media.mobileS`
+        border: .15vw solid #fff;
+    `}
 `;
 
 const MainScreenTextArea = styled.textarea`
@@ -113,6 +182,20 @@ const MainScreenTextArea = styled.textarea`
         height: 9vw;
         font-size: 16px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 130px;
+        font-size: 20px;
+    }
+    ${media.mobileL`
+        height: 120px;
+        font-size: 18px;
+    `}
+    ${media.mobileM`
+        border: .12vw solid #fff;
+    `}
+    ${media.mobileS`
+        border: .15vw solid #fff;
+    `}
 `;
 
 const MainScreenAlertAndSendButtonHolder = styled.div`
@@ -122,6 +205,15 @@ const MainScreenAlertAndSendButtonHolder = styled.div`
     justify-content: space-between;
     ${media.ipadPortrait`
         height: 43px;
+        margin-bottom: 27px;
+    `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 60px;
+        width: 57vw;
+    }
+    ${media.mobileL`
+        width: 93.5%;
+        height: 60px;
     `}
 `;
 
@@ -161,6 +253,9 @@ const FormAlertTextHolder = styled.div`
     ${media.ipadPortrait`
         font-size: 12.5px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 14px;
+    }
 `;
 
 const MainScreenAbbreviation = styled.abbr`
@@ -179,7 +274,22 @@ const MainScreenSendButton = styled(MainScreenInput)`
         color: #f39;
         transition: all .3s ease;
     }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 60px;
+    }
 `;
+
+const MainScreenPolicy = styled.p`
+    display: none;
+    ${media.ipadPortrait`
+        display: block;
+        margin: 0;
+        font-size: 14px;
+        width: 95%;
+        font-family: 'Roboto';
+        color: #FFF;
+    `}
+`
 
 export {
     BannerHolder,
@@ -196,5 +306,6 @@ export {
     EmptyDiv,
     MainScreenFormTextAlert,
     MainScreenAbbreviation,
-    MainScreenSendButton
+    MainScreenSendButton,
+    MainScreenPolicy
 }

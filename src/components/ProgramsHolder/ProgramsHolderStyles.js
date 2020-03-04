@@ -20,6 +20,12 @@ const ProgramsHolderHeadingKeeper = styled.div`
     ${media.ipadLandscape`
         justify-content: center;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        width: 75vw;
+    }
+    ${media.mobileL`
+        width: 80vw;
+    `}
 `;
 
 const ProgramsHolderHeading = styled.p`
@@ -28,6 +34,15 @@ const ProgramsHolderHeading = styled.p`
     font-size: 3vw;
     ${media.ipadPortrait`
         font-size: 46px;
+    `}
+    ${media.mobileL`
+        font-size: 36px;
+    `}
+    ${media.mobileM`
+        font-size: 35px;
+    `}
+    ${media.mobileS`
+        font-size: 30px;
     `}
 `;
 
@@ -43,6 +58,9 @@ const ProgramsHoldingDiv = styled.div`
     `}
     ${media.ipadPortrait`
         width: 75vw;
+    `}
+    ${media.mobileL`
+        width: 80vw;
     `}
 `;
 

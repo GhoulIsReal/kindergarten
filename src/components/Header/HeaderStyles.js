@@ -8,12 +8,14 @@ const HeaderContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: sticky;
   top: 0;
-  z-index: 3;
   background-color: #FFF;
   ${media.ipadPortrait`
     height: 100px;
+  `}
+  ${media.mobileL`
+    height: 80px;
   `}
 `;
 
@@ -23,6 +25,9 @@ const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${media.mobileL`
+    width: 90vw;
+  `}
 `;
 
 const HeaderLogoAndTextHolder = styled.div`
@@ -80,7 +85,7 @@ const HeaderAnchorsContainer = styled.div`
 
 const HeaderAnchor = styled.p`
   color: #262835;
-  margin: 0 0 0 25px;
+  margin: 0;
   font-family: 'Gilroy-Light';
   font-weight: 600;
   font-size: 1.302081vw;

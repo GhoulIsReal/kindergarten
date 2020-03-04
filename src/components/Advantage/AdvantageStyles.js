@@ -28,18 +28,29 @@ const AdvantageCardHeading = styled.p`
     ${media.ipadPortrait`
         font-size: 23px;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 30px;
+    }
 `;
 
-const AdvantageCardDescription = styled(AdvantageCardHeading)`
+const AdvantageCardDescription = styled.div`
     font-family: 'Gilroy-Light';
     font-size: 1vw;
     height: 70%;
+    width: 100%;
+    cursor: default;
     color: #4e4e4e;
     ${media.ipadLandscape`
         font-size: 15px;
     `}
     ${media.ipadPortrait`
         font-size: 20px;
+    `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 25px;
+    }
+    ${media.mobileM`
+        font-size: 18px;
     `}
 `;
 

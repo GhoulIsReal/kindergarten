@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import cover from './aboutUsCover.jpg';
 import media from '../../mediaQueries';
-import mobileCover from './mobileCover.jpg';
+import ipadCover from './ipadCover.jpg';
+import mobileCover from './mobileCover.jpg'
 
 
 const AboutUsSection = styled.div`
@@ -17,8 +18,24 @@ const AboutUsSection = styled.div`
     `}
     ${media.ipadPortrait`
         height: 60vh;
+        background: url(${ipadCover}) center center no-repeat;  
+        background-size: 100% auto;
+    `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 100vh;
+    }
+        @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
         background: url(${mobileCover}) center center no-repeat;  
         background-size: 100% auto;
+        height: 100vh;
+    }
+    ${media.mobileL`
+        background: url(${mobileCover}) center center no-repeat;  
+        height: 130vh;
+        background-size: cover;
+    `}
+    ${media.mobileS`
+        height: 180vh;
     `}
 `;
 
@@ -42,6 +59,16 @@ const AboutUsContent = styled.div`
     ${media.ipadPortrait`
         height: 60%;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: 68%;
+    }
+    ${media.mobileL`
+        width: 75vw;
+        height: 70%;
+    `}
+    ${media.mobileS`
+        justify-content: space-around;
+    `}
 `;
 
 const AboutUsCaption = styled.p`
@@ -54,6 +81,12 @@ const AboutUsCaption = styled.p`
     ${media.ipadPortrait`
         font-size: 46px;
     `}
+    ${media.mobileL`
+        font-size: 36px;
+    `}
+    ${media.mobileM`
+        font-size: 33px;
+    `}
 `;
 
 const AboutUsText = styled(AboutUsCaption)`
@@ -63,6 +96,18 @@ const AboutUsText = styled(AboutUsCaption)`
     ${media.ipadPortrait`
         font-size: 24px;
         line-height: 33px;
+    `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        font-size: 26px;
+    }
+    ${media.mobileL`
+        font-size: 20px;
+    `}
+    ${media.mobileM`
+        font-size: 18px;
+    `}
+    ${media.mobileS`
+        font-size: 16px;
     `}
 `;
 

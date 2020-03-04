@@ -29,6 +29,17 @@ const AdvantagesHeading = styled.div`
         font-size: 36px;
         margin: 90px 0 60px 0;
     `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        width: 75vw;
+    }
+    ${media.mobileL`
+        width: 85vw;
+        font-size: 32px;
+        height: auto;
+    `}
+    ${media.mobileM`
+        font-size: 28px;
+    `}
 `;
 
 const AdvantagesBlurredBG = styled(TextBlurredBG)`
@@ -42,6 +53,15 @@ const AdvantagesHolderBlock = styled.div`
     justify-content: center;
     ${media.ipadPortrait`
         height: 100vh;
+    `}
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        height: 185vh;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        height: auto;
+    }
+    ${media.mobileL`
+        height: auto;
     `}
 `;
 
@@ -57,6 +77,21 @@ const AdvantagesHolder = styled.div`
         grid-template-columns: repeat(auto-fit, 359px);
         grid-template-rows: repeat(auto-fit, 400px);
         grid-gap: 50px;
+    `}
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        grid-template-columns: repeat(auto-fit, 75vw);
+        grid-template-rows: repeat(5, 400px);
+        margin-bottom: 50px;
+    }
+    ${media.mobileL`
+        grid-template-columns: repeat(auto-fit, 80vw);
+        grid-template-rows: repeat(6, 350px);
+        height: auto;
+        margin-bottom: 50px;
+    `}
+    ${media.mobileS`
+        grid-template-columns: repeat(auto-fit, 85vw);
+        grid-template-rows: repeat(6, 370px);
     `}
 `;
 
