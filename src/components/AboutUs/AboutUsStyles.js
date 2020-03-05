@@ -34,6 +34,9 @@ const AboutUsSection = styled.div`
         height: 130vh;
         background-size: cover;
     `}
+    ${media.mobileM`
+        height: 135vh;
+    `}
     ${media.mobileS`
         height: 180vh;
     `}
@@ -65,6 +68,9 @@ const AboutUsContent = styled.div`
     ${media.mobileL`
         width: 75vw;
         height: 70%;
+    `}
+    ${media.mobileM`
+        height: 72%;
     `}
     ${media.mobileS`
         justify-content: space-around;

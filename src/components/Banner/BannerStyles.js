@@ -29,7 +29,7 @@ const BannerHolder = styled.div`
         width: 100vw;
         background: url(${mainImage}) center right no-repeat;  
         background-size: cover;
-        justify-content: flex-end;
+        justify-content: center;
     `}
     ${media.mobileS`
         height: 900px;
@@ -52,6 +52,7 @@ const ShortTextAndFormHolder = styled.div`
         width: 90vw;
         height: 100%;
         justify-content: flex-end;
+        align-items: center;
     `}
 `;
 
@@ -91,6 +92,7 @@ const ShortAbout = styled.p`
     }
     ${media.mobileL`
         width: 100%;
+        font-size: 30px;
     `}
 `;
 
@@ -105,6 +107,9 @@ const AgeScopeText = styled(ShortAbout)`
     @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
         font-size: 25px;
     }
+    ${media.mobileL`
+        font-size: 16px;
+    `}
 `;
 
 const MainScreenFormHolder = styled(ShortAboutAndAgeScopeText)`
@@ -120,6 +125,7 @@ const MainScreenFormHolder = styled(ShortAboutAndAgeScopeText)`
         align-items: flex-start;
         margin-top: 40px;
         margin-bottom: 60px;
+        align-items: center;
     `}
 `;
 
@@ -150,8 +156,9 @@ const MainScreenInput = styled.input`
         font-size: 20px;
     }
     ${media.mobileL`
-        height: 60px;
+        height: 64px;
         font-size: 18px;
+        padding: 1.38vw;
     `}
     ${media.mobileM`
         border: .12vw solid #fff;
@@ -251,7 +258,7 @@ const FormAlertTextHolder = styled.div`
     font-weight: 600;
     color: #F39;
     ${media.ipadPortrait`
-        font-size: 12.5px;
+        font-size: 12px;
     `}
     @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
         font-size: 14px;

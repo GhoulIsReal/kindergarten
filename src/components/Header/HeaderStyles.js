@@ -57,17 +57,19 @@ const HeaderLogoLargeText = styled.p`
   max-width: 100%;
   max-height: 65%;
   margin: 0;
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto';
   font-size: 0.911458vw;
   color: rgb(204, 162, 228);
   ${media.ipadLandscape`
     font-size: 14px;
   `}
+  ${media.mobileL`
+    font-size: 15px;
+  `}
 `;
 
 const HeaderLogoSmallText = styled(HeaderLogoLargeText)`
   max-height: 35%;
-  font-family: 'Comfortaa', cursive;
   font-size: 0.651043vw;
   color: rgb(149, 149, 149);
   ${media.ipadLandscape`
