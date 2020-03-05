@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b3a9b97.chunk.css",
-    "main.js": "/static/js/main.57a784f2.chunk.js",
-    "main.js.map": "/static/js/main.57a784f2.chunk.js.map",
+    "main.css": "/static/css/main.6eccb6a8.chunk.css",
+    "main.js": "/static/js/main.cd019977.chunk.js",
+    "main.js.map": "/static/js/main.cd019977.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.62e6c501.js",
     "runtime-main.js.map": "/static/js/runtime-main.62e6c501.js.map",
-    "static/js/2.391aaf31.chunk.js": "/static/js/2.391aaf31.chunk.js",
-    "static/js/2.391aaf31.chunk.js.map": "/static/js/2.391aaf31.chunk.js.map",
+    "static/js/2.27682dc6.chunk.js": "/static/js/2.27682dc6.chunk.js",
+    "static/js/2.27682dc6.chunk.js.map": "/static/js/2.27682dc6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.45785107f3f4ab27e5ca1c7ad71891b3.js": "/precache-manifest.45785107f3f4ab27e5ca1c7ad71891b3.js",
+    "precache-manifest.f3b826557da100faaf1c77df5182daee.js": "/precache-manifest.f3b826557da100faaf1c77df5182daee.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.1b3a9b97.chunk.css.map": "/static/css/main.1b3a9b97.chunk.css.map",
-    "static/js/2.391aaf31.chunk.js.LICENSE.txt": "/static/js/2.391aaf31.chunk.js.LICENSE.txt",
+    "static/css/main.6eccb6a8.chunk.css.map": "/static/css/main.6eccb6a8.chunk.css.map",
+    "static/js/2.27682dc6.chunk.js.LICENSE.txt": "/static/js/2.27682dc6.chunk.js.LICENSE.txt",
     "static/media/Gilroy-ExtraBold.otf": "/static/media/Gilroy-ExtraBold.0f6e082f.otf",
+    "static/media/Gilroy-ExtraBold.woff": "/static/media/Gilroy-ExtraBold.31f9f231.woff",
+    "static/media/Gilroy-ExtraBold.woff2": "/static/media/Gilroy-ExtraBold.36f988ad.woff2",
+    "static/media/Gilroy-Light.woff2": "/static/media/Gilroy-Light.48f99c5d.woff2",
+    "static/media/Gilroy-Light.woff": "/static/media/Gilroy-Light.554c6ae4.woff",
     "static/media/Gilroy-Light.otf": "/static/media/Gilroy-Light.c62aded7.otf",
     "static/media/Untitled.jpg": "/static/media/Untitled.c240bc0f.jpg",
     "static/media/aboutUsCover.jpg": "/static/media/aboutUsCover.ade6b88d.jpg",
@@ -28,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.62e6c501.js",
-    "static/js/2.391aaf31.chunk.js",
-    "static/css/main.1b3a9b97.chunk.css",
-    "static/js/main.57a784f2.chunk.js"
+    "static/js/2.27682dc6.chunk.js",
+    "static/css/main.6eccb6a8.chunk.css",
+    "static/js/main.cd019977.chunk.js"
   ]
 }
