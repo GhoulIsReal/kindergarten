@@ -11,6 +11,9 @@ const HeaderContentWrapper = styled.div`
   position: sticky;
   top: 0;
   background-color: #FFF;
+  @media only screen and (min-width: 2300px) {
+    height: 14vh;
+  }
   ${media.ipadPortrait`
     height: 100px;
   `}

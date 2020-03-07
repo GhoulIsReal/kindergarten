@@ -16,7 +16,7 @@ const AdvantagesSectionHolder = styled.div`
 
 const AdvantagesHeading = styled.div`
     margin: 90px 0 30px 0;
-    width: 45vw;
+    width: 50vw;
     height: 7vh;
     font-family: 'Gilroy-ExtraBold';
     font-size: 3vw;

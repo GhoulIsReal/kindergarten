@@ -111,6 +111,12 @@ body {
   transform: rotate(-45deg) translate(0, 16px);
 }
 
+@media only screen and (min-width: 2300px) {
+  .prevent-scroll {
+    height: 14vh;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   #menuToggle input:checked ~ span {
     transform: rotate(45deg) translate(-15px, -30px);
