@@ -1,7 +1,7 @@
 {
-  "homepage": "https://dochkisynochki.kz",
+  "homepage": "https://ghoulisreal.github.io/kindergarten/",
   "name": "kindergarten",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "2gis-maps": "^3.5.15",
